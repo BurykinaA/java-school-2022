@@ -1,17 +1,12 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Task4 {
 
     static StringBuffer removeJavaComments(StringBuffer s){
         int i=0;
         int a=-1, b=-1;
-
-        
-        System.out.println(s.charAt(s.length()-21));
-        System.out.println(s.charAt(s.length()-22));
-        System.out.println(s.charAt(s.length()-23));
-        System.out.println(s.charAt(s.length()-24));
-
+        ArrayList<String> arr = new ArrayList<String>();
         while(i<s.length()-1){
             if(s.charAt(i)=='/' && s.charAt(i+1)=='*'){
                 a = i;
@@ -20,27 +15,35 @@ public class Task4 {
                     i++;
                 i+=2;
                 b = i;
-                s.delete(a,b);
+                arr.add(Integer.toString(a) + " " + Integer.toString(b));
             }
             else if(s.charAt(i)=='/' && s.charAt(i+1)=='/'){
                 a = i;
                 i++;
-                while(s.charAt(i)!='\n' && s.charAt(i)!='\t' && s.charAt(i)!='\r' && s.charAt(i)!='\\' && s.charAt(i)!='\'' && s.charAt(i)!='\"' && s.charAt(i)!=s.charAt(s.length()-23) && s.charAt(i)!='\b' && s.charAt(i)!='\f' && i<s.length()-1)
+                while(s.charAt(i)!='\n'  && i<s.length()-1)
                     i++;
-                i++;
+                //i++;
                 b = i;
-                s.delete(a, b);
+                arr.add(Integer.toString(a) + " " + Integer.toString(b));
             }
             else
                 i++;
         }
-
+        
+        int dt = 0;
+        for(String t : arr) {
+            String[] tmp = t.split(" ");
+            a = Integer.valueOf(tmp[0]);
+            b = Integer.valueOf(tmp[1]);
+            s.delete(a-dt, b-dt);
+            dt+=b-a;
+        }
         return s;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		String source = """
+        String source = """
         /*
         * My first ever program in Java!
         */
@@ -58,6 +61,5 @@ public class Task4 {
         StringBuffer strBuffer = new StringBuffer(source);
         StringBuffer noComments = removeJavaComments(strBuffer);
         System.out.println(noComments.toString());
-	}
-  }
-  
+    }
+}
