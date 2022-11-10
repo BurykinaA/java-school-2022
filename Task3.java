@@ -27,18 +27,16 @@ public class Task3 {
             }
         }
 
-        int tmp = arr[0];
-        arr[0] = arr[indmin];
-        arr[indmin] = tmp;
+        in.close();
 
-        if(indmax != 0){
-            tmp = arr[size-1];
-            arr[size-1] = arr[indmax];
-            arr[indmax] = tmp;
-        }
+        System.out.print (arr[indmin] + " "); 
 
         for (int i = 0; i < size; i++)
-            System.out.print (arr[i] + " "); 
+            if(i!= indmax && i!= indmin)
+                System.out.print (arr[i] + " "); 
+        
+        System.out.print (arr[indmax] + " "); 
+
 	}
   }
   

@@ -22,6 +22,7 @@ public class Task2 {
         Scanner in = new Scanner(System.in);
 		double x = in.nextDouble();
         printBytes(x);
+        in.close();
 	}
   }
   

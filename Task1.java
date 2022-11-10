@@ -13,7 +13,7 @@ public class Task1 {
 		}
 	}
 
-	static Point get_Coordinates(int num){
+	static Point getCoordinates(int num){
 		Scanner in = new Scanner(System.in);
 
 		System.out.print("Введите координату х вершины №" + num + " : ");
@@ -22,21 +22,21 @@ public class Task1 {
 		System.out.print("Введите координату y вершины №" + num + " : ");
 		double y = in.nextDouble();
 
+		in.close();
 		return new Point(x, y);
 	}
   
-	static double Area(Point a, Point b, Point c){
+	static double area(Point a, Point b, Point c){
 		return 0.5 * Math.abs((b.x - a.x)*(c.y-a.y) - (c.x - a.x)*(b.y-a.y));
 	}
 
 	public static void main(String[] args) {
 
-		Point a = get_Coordinates(1);
-		Point b = get_Coordinates(2);
-		Point c = get_Coordinates(3);
+		Point a = getCoordinates(1);
+		Point b = getCoordinates(2);
+		Point c = getCoordinates(3);
 
-		System.out.println("Площадь треугольника: " + Area(a,b,c));
-	  
+		System.out.println("Площадь треугольника: " + area(a,b,c));
 	}
   }
   
