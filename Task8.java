@@ -8,13 +8,15 @@ public class Task8 {
         File file = new File(filename);
         Scanner scanner = new Scanner(file);
         int words = 0;
+        String tmp ="";
 
         while (scanner.hasNextLine()) {
-            String[] array = scanner.nextLine().split("\s+");
-//            for(String num : array){
-//                System.out.print(num + "|");
-//            }
-            words = words + array.length;
+            String[] array = scanner.nextLine().split("[\s\n]+");
+            int cnt=0;
+            for(String num : array){
+                if(num!="") cnt++;
+            }
+            words = words + cnt;
         }
 
         System.out.println("Number of words: " + words);
