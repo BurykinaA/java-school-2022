@@ -2,12 +2,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
 
-public class Task9 {
+public class Main {
 
     public static void getPath(String s) {
         String[] a = s.split("/");
         for(int i=0; i<a.length; i++){
             if(a[i].equals(".")) a[i]="";
+            boolean flag = true;
             if(a[i].equals("..")){
                 int j = i-1;
                 while(j>=0){
@@ -20,6 +21,10 @@ public class Task9 {
                     }
                     j--;
                 }
+                if(j == -1 && flag){
+                    a[i]="";
+                    flag = false;
+                }
             }
         }
         for(int i=0; i<a.length-1; i++){
@@ -30,6 +35,6 @@ public class Task9 {
     }
 
     public static void main(String[] args){
-        getPath("КРОК/работа/src/./../../универ/../../../мемы/котики");
+        getPath("../КРОК/работа/src/./../../универ/мемы/котики");
     }
 }
