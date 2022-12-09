@@ -1,9 +1,9 @@
-package Task14;
+package Task12;
 
-import java.util.*;
+import java.util.List;
+import java.util.Set;
 
-
-public interface BlackListFilter<T1, T2> {
+public interface BlackListFilter {
 
     /**
      * From the given list of comments removes ones
@@ -15,31 +15,29 @@ public interface BlackListFilter<T1, T2> {
      * @param blackList list of words that should not
      *                  be present in a comment
      */
-    Collection<T1> filterComments(Collection<T1> comments, Collection<T2> blackList);
-
+    void filterComments(List<String> comments, Set<String> blackList);
 }
 
 class Relies implements  BlackListFilter{
 
-
     @Override
-    public Collection filterComments(Collection comments, Collection blackList) {
-        Collection comments_new = null;
-        Iterator Iter = comments.iterator();
-        while (Iter.hasNext()){
-            Object tmp = Iter.next();
+    public void filterComments(List<String> comments, Set<String> blackList) {
+
+        List<String> comments_new = null;
+        for(int i=0; i<comments.size(); i++){
             Boolean flag = true;
-            for (Object j: (tmp.toString().split(" "))) {
+            for (String j: comments.get(i).split(" ")) {
                 if(blackList.contains(j)){
                     flag = false;
                     break;
                 }
             }
             if(flag){
-                comments_new.add(tmp);
+                comments_new.add(comments.get(i));
             }
         }
 
-        return comments_new;
+        comments = comments_new;
+
     }
 }

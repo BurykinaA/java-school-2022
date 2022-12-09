@@ -1,3 +1,5 @@
+package Task11;
+
 public class Lot {
     volatile int price;
     volatile String name;

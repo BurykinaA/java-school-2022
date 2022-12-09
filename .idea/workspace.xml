@@ -2,20 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba50c747-0016-4a0e-81be-7d65596fced3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Task1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task5.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task6.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task7.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task8.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task9.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -33,7 +28,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Git projects/java-school-2022/java-school-2022"
+    "last_opened_file_path": "D:/Git projects/java-school-2022/java-school-2022",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -45,6 +43,7 @@
       <option name="presentableId" value="Default" />
       <updated>1668847873789</updated>
       <workItem from="1668847875636" duration="51000" />
+      <workItem from="1670606058099" duration="1575000" />
     </task>
     <servers />
   </component>
